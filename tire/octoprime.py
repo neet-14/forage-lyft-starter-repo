@@ -6,11 +6,4 @@ class Octoprime(tire):
         self.tireArray = tireArray
 
     def needs_service(self):
-        total = 0
-        for i in self.tireArray:
-            total += i
-
-        if total >= 3:
-            return True
-        else:
-            return False
+        return sum(self.tireArray) >= 3
