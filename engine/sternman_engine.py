@@ -1,9 +1,7 @@
-from abc import ABC
-
-from car import Car
+from engine import Engine, abstractmethod
 
 
-class SternmanEngine(Car, ABC):
+class SternmanEngine(Engine):
     def __init__(self, last_service_date, warning_light_is_on):
         super().__init__(last_service_date)
         self.warning_light_is_on = warning_light_is_on
@@ -13,3 +11,7 @@ class SternmanEngine(Car, ABC):
             return True
         else:
             return False
+        
+    @abstractmethod
+    def needs_service(self):
+        pass
