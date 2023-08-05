@@ -48,3 +48,6 @@ class TestCarFactory(unittest.TestCase):
 
         car = CarFactory.create_thovex(today,last_service_date, current_mileage, last_service_mileage)
         self.assertTrue(car.needs_service())
+
+    if __name__  == '__main__':
+        unittest.main()
